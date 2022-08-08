@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Calculator from './components/Calculator';
 import { setTheme } from './redux/slices/theme';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 	return (
 		<div className="App">
 			<h2>hello world</h2>
+			<Calculator />
 		</div>
 	);
 }
