@@ -2,7 +2,7 @@
 echo '------ INSTALING CONVERTER APP ---------'
 sleep 3
 
-cd ~
+cd ~/
 git clone https://github.com/Fredvel123/converter_any_base_app
 
 
