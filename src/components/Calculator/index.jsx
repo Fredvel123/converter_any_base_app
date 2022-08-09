@@ -19,6 +19,7 @@ function Calculator() {
 
 	const handlerSubmit = (e) => {
 		e.preventDefault();
+
 		const preResult = converterToBaseten(number, base);
 		setResult(convertToAnyBase(preResult, goalBase));
 	};
@@ -28,21 +29,29 @@ function Calculator() {
 		<CalculatorStyled color={theme ? lightTheme : darkTheme}>
 			<h2>Converter:</h2>
 			<form action="" onSubmit={handlerSubmit}>
-				<Inputs type="text" setState={setNumber} placeh="number" />
+				<Inputs
+					type="text"
+					setState={setNumber}
+					placeh="number"
+					state={number}
+					baseIndex={base}
+					iden="enter"
+				/>
 				<Inputs
 					type="number"
 					setState={setBase}
-					placeh="from"
-					min="0"
-					max="20"
+					placeh="from e.g(base 10)"
+					state={base}
+					iden="base"
 				/>
 				<Inputs
 					type="number"
 					setState={setGoalBase}
-					placeh="to"
-					min="0"
-					max="20"
+					placeh="to e.g(base 16)"
+					state={goalBase}
+					iden="goalBase"
 				/>
+
 				<button>Convert</button>
 			</form>
 			<h1>Result: {result}</h1>
