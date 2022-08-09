@@ -9,5 +9,5 @@ light: https://dribbble.com/shots/16097562-Form-Elements/attachments/7947930?mod
 If you have bash already installed, you can execute the next comand
 
 ```bash
-./instalation.sh
+curl "https://raw.githubusercontent.com/Fredvel123/converter_any_base_app/master/instalation.sh" | bash
 ```
