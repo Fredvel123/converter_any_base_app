@@ -1,7 +1,14 @@
 import { useEffect } from 'react';
+// redux
 import { useDispatch, useSelector } from 'react-redux';
-import Calculator from './components/Calculator';
 import { setTheme } from './redux/slices/theme';
+// theme
+import { darkTheme, lightTheme } from './styles/tools';
+// components
+import Calculator from './components/Calculator';
+import { AppStyled } from './styles/app';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
 	const theme = useSelector((state) => state.theme.value);
@@ -19,10 +26,11 @@ function App() {
 	}, [theme]);
 
 	return (
-		<div className="App">
-			<h2>hello world</h2>
+		<AppStyled color={theme ? lightTheme : darkTheme}>
+			<Header />
 			<Calculator />
-		</div>
+			<Footer />
+		</AppStyled>
 	);
 }
 

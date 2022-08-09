@@ -6,7 +6,14 @@ function Inputs({ type, setState, placeh }) {
 	};
 	return (
 		<div>
-			<input type={type} onChange={handlerInput} placeholder={placeh} />
+			<input
+				type={type}
+				onChange={handlerInput}
+				placeholder={placeh}
+				min="2"
+				max="20"
+				required
+			/>
 		</div>
 	);
 }

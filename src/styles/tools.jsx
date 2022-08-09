@@ -12,7 +12,7 @@ export const lightTheme = {
 	secondary: '#FFFFFF',
 	text: '#3D4852',
 	hover: '#141926',
-	button: '#3D4852',
+	button: '#413DF7',
 	gray: '#6E777E',
 };
 
